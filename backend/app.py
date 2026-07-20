@@ -1,11 +1,13 @@
 from flask import Flask
 from routes.chat import chat
 from routes.youtube import youtube
+from routes.seo import seo
 
 app = Flask(__name__)
 
 app.register_blueprint(chat)
 app.register_blueprint(youtube)
+app.register_blueprint(seo)
 
 @app.route("/")
 def home():
