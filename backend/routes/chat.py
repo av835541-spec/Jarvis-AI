@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 from services.ai_service import generate_reply
+from services.memory import save_message
 
 chat = Blueprint("chat", __name__)
 
@@ -7,6 +8,8 @@ chat = Blueprint("chat", __name__)
 def ai_chat():
     data = request.get_json()
     message = data.get("message", "")
+
+    save_message(message)
 
     reply = generate_reply(message)
 
