@@ -1,3 +1,4 @@
+from services.database import init_db
 from flask import Flask
 from routes.chat import chat
 from routes.youtube import youtube
@@ -5,6 +6,7 @@ from routes.seo import seo
 from routes.search import search
 
 app = Flask(__name__)
+init_db()
 
 app.register_blueprint(chat)
 app.register_blueprint(youtube)
