@@ -13,3 +13,14 @@ def init_db():
 
     conn.commit()
     conn.close()
+def save_message(message):
+    conn = sqlite3.connect("jarvis.db")
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "INSERT INTO memory (message) VALUES (?)",
+        (message,)
+    )
+
+    conn.commit()
+    conn.close()
