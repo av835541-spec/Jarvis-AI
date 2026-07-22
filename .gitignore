@@ -32,3 +32,18 @@ google-services.json
 
 # Android Profiling
 *.hprof
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Database
+jarvis.db
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
