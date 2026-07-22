@@ -3,3 +3,8 @@ python-dotenv==1.0.1
 requests==2.32.3
 openai
 google-generativeai
+Flask
+openai
+google-generativeai
+python-dotenv
+requests
