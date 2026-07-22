@@ -1,3 +1,5 @@
+from services.database import save_message
+services.database
 from flask import Blueprint, request, jsonify
 from services.ai_service import generate_reply
 from services.memory import save_message
